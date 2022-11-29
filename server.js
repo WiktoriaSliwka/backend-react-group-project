@@ -6,7 +6,7 @@ const User = require('./models')
 const Questions = require('./models/Questions')
 const questionsRouter = require('./routes/questions')
 const userRouter = require('./routes/user')
-const PORT = 3000
+const PORT = 5000
 const cors = require('cors')
 
 
@@ -18,9 +18,7 @@ app.use("/user", userRouter)
 app.use("/questions", questionsRouter)
 
 
-app.put('/user', (req, res) => {
-    res.json()
-})
+
 
 app.listen(PORT, async () => {
     await seed()

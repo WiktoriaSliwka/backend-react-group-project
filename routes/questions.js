@@ -1,14 +1,14 @@
 const Questions = require("../models/Questions");
 const Router = require('express');
 const questionsRouter = Router();
-const {getQuestions} = require ("../db/questions")
+const getQuestions = require ("../db/questions")
 
+//GET // http://localhost:5000/questions
 questionsRouter.get('/', async (req, res) => {
-     const questions = await getQuestions();
+     const questions = getQuestions();
      res.send(questions)
 })
 
-//This works with Postman from Questions findAll
 // const Questions = require("../models/Questions");
 // const Router = require('express');
 // const questionsRouter = Router();
